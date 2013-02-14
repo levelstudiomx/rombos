@@ -1,0 +1,88 @@
+*{box-sizing:border-box;}
+
+body{
+
+    padding-top:70px;
+    font: 20px Arial, Helvetica;
+    text-transform: uppercase;
+   font-weight: bold;
+   background: pink;
+}
+.rombo{
+    padding-top:80px;
+	margin: 30px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	color: white;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    text-shadow: 1px 1px 1px #000;
+    transform: rotate(45deg) ;
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+    position: relative;
+    margin-right: 70px;
+
+}
+
+
+ .rombo > div{
+padding: 10px 0;
+width: 100%;
+text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ transform: rotate(-45deg);
+ background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Auto_Racing_Black.svg/800px-Auto_Racing_Black.svg.png) 300px top no-repeat;
+    transition: background .5s ease;
+}
+
+.rombo:hover > div {
+
+    background-position: 0 top;
+}
+
+
+
+
+
+
+.rombo::before {
+content: "";
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+position: absolute;
+z-index: -1; 
+background: url(http://1.bp.blogspot.com/_a1q9RYmoG_Q/TJzt8OCup3I/AAAAAAAAFM4/BppvRpfkv30/s1600/machete3.jpg) -500px 0 no-repeat;
+transform: rotate(-45deg) ;
+transition:all .8s .09s ease;
+opacity: .5;
+
+
+}
+
+
+.rombo:hover::before {
+
+opacity: 1;
+transform: scale(.7) rotate(-45deg);
+
+
+}
+
+
+.rombo:hover {
+width: 400px;
+height: 400px;
+
+
+}
+
+
+.rombo:nth-child(1) {background: red;margin-left: 15%;}	
+.rombo:nth-child(2) {background: green;}
+.rombo:nth-child(3) {background: blue;}
